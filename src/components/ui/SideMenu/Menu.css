@@ -1,0 +1,35 @@
+.navigation {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  background: #000;
+  color: #fff;
+  border-right: 1px solid rgb(37, 19, 19);
+}
+.logo {
+  margin: 40px 0;
+  text-align: center;
+  font-size: 25px;
+}
+.logo span {
+  color: red;
+  font-size: 12px;
+}
+.active {
+  color: red !important;
+}
+
+.menu {
+  list-style: none;
+  padding: 20px;
+}
+.menu a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin: 25px 15px;
+}

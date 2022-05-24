@@ -1,0 +1,22 @@
+.search {
+  padding: 20px;
+}
+
+.search input,
+.search button {
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+.search input {
+  border: 1px solid #000;
+  width: 400px;
+}
+.search input:focus {
+  outline: solid 2px rgba(0, 0, 0, 0.305);
+}
+.search button {
+  background-color: black;
+  color: #fff;
+  padding: 11px;
+}

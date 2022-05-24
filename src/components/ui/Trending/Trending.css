@@ -1,0 +1,30 @@
+.trending {
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.trending .title {
+  font-size: 25px;
+}
+
+.movies {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.movie {
+  color: #000;
+  width: 15%;
+  margin: 0px 5px;
+}
+.movie p {
+  padding: 4px;
+}
+.movie img {
+  width: 100%;
+  transition: transform ease-in-out 200ms;
+}
+
+.movie:hover img {
+  transform: scale(1.2);
+}
