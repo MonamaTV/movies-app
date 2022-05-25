@@ -43,7 +43,9 @@ const Movie = () => {
           </li>
           <li>
             Language(s){" "}
-            <span>{movieData?.spoken_languages?.map(({ name }) => name)}</span>
+            <span>
+              {movieData?.spoken_languages?.map(({ name }) => name + ". ")}
+            </span>
           </li>
         </ul>
         <div className="genres">

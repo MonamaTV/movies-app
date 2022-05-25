@@ -9,8 +9,6 @@ const Shows = () => {
     const fetchData = async () => {
       try {
         const { data: results } = await axiosInstance.get("/tv/popular");
-        console.log(results);
-
         setShows(results.results);
       } catch (error) {
         console.log(error);
@@ -18,6 +16,7 @@ const Shows = () => {
     };
     fetchData();
   }, []);
+
   const handleInput = (e) => {
     const value = e.target.value;
     setQuery(value);

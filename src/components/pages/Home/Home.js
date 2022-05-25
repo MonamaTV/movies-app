@@ -8,7 +8,6 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    console.log("Request");
     const fetchData = async () => {
       try {
         const response = await Promise.all([

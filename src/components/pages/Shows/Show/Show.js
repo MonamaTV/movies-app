@@ -26,12 +26,22 @@ const Show = () => {
       <div className="movie-content">
         <h2>{showData.name}</h2>
         <small>
-          {showData.vote_average} rating | {showData.first_air_date} |{" "}
+          {showData.vote_average} rating | {showData.first_air_date} | Ep.
+          length {showData.episode_run_time[0]}min{" "}
         </small>
         <p>{showData.overview}</p>
         <ul>
           <li>
+            First episode <span> {showData.first_air_date}</span>
+          </li>
+          <li>
+            Last episode <span> {showData.last_air_date}</span>
+          </li>
+          <li>
             Status <span> {showData.status}</span>
+          </li>
+          <li>
+            No. of seasons: <span> {showData.number_of_seasons}</span>
           </li>
           <li>
             Based in: <span> {showData.origin_country[0]}</span>
@@ -42,7 +52,9 @@ const Show = () => {
             <span>
               {" "}
               {showData.spoken_languages.map(({ name }) => (
-                <span key={name}>{name}</span>
+                <span key={name}>
+                  {name} {""}
+                </span>
               ))}
             </span>
           </li>
