@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     <div>
       <Menu />
-      <main>{children}</main>
+      <main className="main">{children}</main>
     </div>
   );
 };

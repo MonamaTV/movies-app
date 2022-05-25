@@ -9,7 +9,6 @@ const Movie = () => {
     const fetchMovieDetails = async () => {
       try {
         const { data } = await axiosInstance.get("/movie/" + movie);
-        console.log(data);
         setMovieData(data);
       } catch (error) {
         console.log(error);
@@ -29,7 +28,7 @@ const Movie = () => {
         <h2>{movieData.title}</h2>
         <small>
           {movieData.vote_average} rating | {movieData.release_date} |{" "}
-          {movieData.runtime} duration
+          {movieData.runtime} min duration
         </small>
         <p>{movieData.overview}</p>
         <ul>
@@ -37,10 +36,10 @@ const Movie = () => {
             Status <span>{movieData.status}</span>
           </li>
           <li>
-            Budget <span>{movieData.budget}</span>
+            Budget <span>${movieData.budget?.toLocaleString()}</span>
           </li>
           <li>
-            Revenue <span>{movieData.revenue}</span>
+            Revenue <span>${movieData.revenue?.toLocaleString()}</span>
           </li>
           <li>
             Language(s){" "}
@@ -49,7 +48,7 @@ const Movie = () => {
         </ul>
         <div className="genres">
           {movieData?.genres?.map(({ name }) => (
-            <p>{name}. </p>
+            <p key={name}>{name}. </p>
           ))}
         </div>
       </div>

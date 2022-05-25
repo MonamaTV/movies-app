@@ -9,6 +9,7 @@ const Shows = () => {
     const fetchData = async () => {
       try {
         const { data: results } = await axiosInstance.get("/tv/popular");
+        console.log(results);
 
         setShows(results.results);
       } catch (error) {

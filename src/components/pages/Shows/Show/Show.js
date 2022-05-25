@@ -9,7 +9,6 @@ const Show = () => {
     const fetchShowDetails = async () => {
       try {
         const { data } = await axiosInstance.get("/tv/" + show);
-        console.log(data);
         setShowData(data);
       } catch (error) {
         console.log(error);
@@ -27,7 +26,7 @@ const Show = () => {
       <div className="movie-content">
         <h2>{showData.name}</h2>
         <small>
-          {showData.vote_average} rating | {showData.release_date} |{" "}
+          {showData.vote_average} rating | {showData.first_air_date} |{" "}
         </small>
         <p>{showData.overview}</p>
         <ul>
@@ -35,11 +34,9 @@ const Show = () => {
             Status <span> {showData.status}</span>
           </li>
           <li>
-            Budget <span> {showData.budget}</span>
+            Based in: <span> {showData.origin_country[0]}</span>
           </li>
-          <li>
-            Revenue <span> {showData.revenue}</span>
-          </li>
+
           <li>
             Language(s){" "}
             <span>

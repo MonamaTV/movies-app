@@ -33,3 +33,45 @@
   align-items: center;
   margin: 25px 15px;
 }
+
+@media (max-width: 816px) {
+  .logo {
+    display: none;
+  }
+  .active {
+    color: #fff !important;
+    background-color: red;
+    font-size: 14px !important;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .navigation {
+    border-top: 1px solid rgba(62, 34, 34, 0.387);
+
+    display: block;
+    position: fixed;
+    flex-direction: row;
+    bottom: 0px;
+    height: 50px;
+    top: initial;
+    color: #fff;
+    z-index: 10;
+    background: rgb(0, 0, 0);
+    width: 100%;
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu-item {
+    display: inline-block;
+    align-items: center;
+  }
+  .menu a {
+    color: #fff;
+    margin: 10px;
+  }
+}

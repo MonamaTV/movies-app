@@ -40,7 +40,7 @@ const Home = () => {
       />
     </div>
   ) : (
-    <h1>Nothing for you...</h1>
+    <h1>Loading...</h1>
   );
 };
 
